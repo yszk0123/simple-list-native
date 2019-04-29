@@ -23,6 +23,8 @@
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {
+    "@types/react": "^16.8.14",
+    "@types/react-native": "^0.57.51",
     "babel-preset-expo": "^5.0.0",
     "jest-expo": "^32.0.0"
   },
