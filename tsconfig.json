@@ -14,6 +14,7 @@
     "typeRoots": ["node_modules/@types", "src/CustomType"],
     "baseUrl": ".",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
   "include": [

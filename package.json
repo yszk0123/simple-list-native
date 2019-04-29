@@ -21,7 +21,10 @@
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "rxjs": "^6.5.1",
+    "tslib": "^1.9.3",
+    "typeless": "^0.1.9-alpha.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
