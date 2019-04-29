@@ -17,6 +17,7 @@
     "esModuleInterop": true
   },
   "include": [
+    "./src/**/*",
     "./screens/**/*",
     "./components/**/*",
     "./constants/**/*",
