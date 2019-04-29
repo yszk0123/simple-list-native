@@ -1,6 +1,6 @@
 const tintColor = '#2f95dc';
 
-export default {
+export const Color = {
   tintColor,
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,
@@ -11,4 +11,4 @@ export default {
   warningText: '#666804',
   noticeBackground: tintColor,
   noticeText: '#fff',
-};
+} as const;
