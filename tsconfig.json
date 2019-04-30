@@ -11,18 +11,12 @@
     "target": "es6",
     "jsx": "react",
     "strict": true,
-    "typeRoots": ["node_modules/@types", "src/CustomType"],
-    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "src/ExternalType"],
+    "baseUrl": "src",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
-  "include": [
-    "./src/**/*",
-    "./screens/**/*",
-    "./components/**/*",
-    "./constants/**/*",
-    "./navigation/**/*"
-  ],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules"]
 }

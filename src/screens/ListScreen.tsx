@@ -1,7 +1,7 @@
+import { List } from 'features/List/components/List';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NavigationComponent } from 'src/ApplicationType';
-import { List } from '../features/List/components/List';
+import { NavigationComponent } from 'types/ApplicationType';
 
 interface Props {}
 
