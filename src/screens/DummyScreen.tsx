@@ -1,21 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { List } from '../features/List';
-import { NavigationComponent } from '../types/ApplicationType';
+import { NavigationComponent } from 'types/ApplicationType';
 
 interface Props {}
 
-export const ListScreen: NavigationComponent<Props> = () => {
+export const DummyScreen: NavigationComponent<Props> = () => {
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
-      <List />
+      <Text>Dummy</Text>
     </View>
   );
 };
 
-ListScreen.navigationOptions = {
-  title: 'List',
+DummyScreen.navigationOptions = {
+  title: 'Dummy',
 };
 
 const styles = StyleSheet.create({
