@@ -1,13 +1,13 @@
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import React, { useCallback, useState } from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { AppNavigator } from './navigation/AppNavigator';
+import { StyleSheet, View } from 'react-native';
 
 type Props = {
   skipLoadingScreen?: boolean;
 };
 
 export const Loader: React.FunctionComponent<Props> = ({
+  children,
   skipLoadingScreen,
 }) => {
   const [isLoadingComplete, setIsLoadingComplete] = useState(true);
@@ -31,12 +31,7 @@ export const Loader: React.FunctionComponent<Props> = ({
       />
     );
   } else {
-    return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigator />
-      </View>
-    );
+    return <View style={styles.container}>{children}</View>;
   }
 };
 

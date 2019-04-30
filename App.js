@@ -1,14 +1,4 @@
 import './src/workaroundForNativeBase';
-import React from 'react';
-import { DefaultTypelessProvider } from 'typeless';
-import { Loader } from './src/Loader';
-
-const App = () => {
-  return (
-    <DefaultTypelessProvider>
-      <Loader />
-    </DefaultTypelessProvider>
-  );
-};
+import { App } from './src/App';
 
 export default App;
