@@ -31,6 +31,8 @@
     "typeless": "^0.1.9-alpha.0"
   },
   "devDependencies": {
+    "@expo/config": "^1.0.3",
+    "@expo/webpack-config": "^0.5.3",
     "@types/jest": "^24.0.12",
     "@types/react": "^16.8.14",
     "@types/react-native": "^0.57.51",
