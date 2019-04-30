@@ -11,6 +11,13 @@
     "target": "es6",
     "jsx": "react",
     "strict": true,
+    "types": [
+      "@types/jest",
+      "@types/react",
+      "@types/react-native",
+      "@types/react-navigation",
+      "@types/react-test-renderer"
+    ],
     "typeRoots": ["node_modules/@types", "src/ExternalType"],
     "baseUrl": "src",
     "moduleResolution": "node",

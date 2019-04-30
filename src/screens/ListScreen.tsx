@@ -1,5 +1,6 @@
+import { Container, Content } from 'native-base';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { List } from '../features/List';
 import { NavigationComponent } from '../types/ApplicationType';
 
@@ -7,10 +8,12 @@ interface Props {}
 
 export const ListScreen: NavigationComponent<Props> = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-      <List />
-    </View>
+    <Container>
+      <Content>
+        <Text>Hello</Text>
+        <List />
+      </Content>
+    </Container>
   );
 };
 

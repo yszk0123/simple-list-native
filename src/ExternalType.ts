@@ -1,7 +1,5 @@
 declare module 'expo';
 
-declare module '@expo/samples';
-
 declare module 'react-navigation' {
   interface NavigationContainer {
     navigationOptions: {
