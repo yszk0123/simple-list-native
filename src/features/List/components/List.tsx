@@ -1,5 +1,12 @@
+import {
+  Button,
+  Container,
+  Content,
+  List as UIList,
+  ListItem,
+  Text,
+} from 'native-base';
 import React from 'react';
-import { Button, Text, View } from 'react-native';
 import { useActions } from 'typeless';
 import { getListState, ListActions, useModule } from '../ListInterface';
 import '../ListModule';
@@ -16,11 +23,27 @@ export const List: React.FunctionComponent<Props> = () => {
   };
 
   return (
-    <View>
-      <Text>count = {count}</Text>
-      <Text>loading = {String(loading)}</Text>
-      <Button title="Increment" onPress={increment} />
-      <Button title="Decrement" onPress={decrement} />
-    </View>
+    <Container>
+      <Content>
+        <UIList>
+          <ListItem>
+            <Text>count = {count}</Text>
+          </ListItem>
+          <ListItem>
+            <Text>loading = {String(loading)}</Text>
+          </ListItem>
+          <ListItem>
+            <Button vertical onPress={increment}>
+              <Text>Increment</Text>
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button vertical onPress={decrement}>
+              <Text>Decrement</Text>
+            </Button>
+          </ListItem>
+        </UIList>
+      </Content>
+    </Container>
   );
 };
