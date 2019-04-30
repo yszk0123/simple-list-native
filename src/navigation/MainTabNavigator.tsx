@@ -5,9 +5,11 @@ import {
   createBottomTabNavigator,
   createStackNavigator,
 } from 'react-navigation';
-import { HomeScreen } from 'screens/HomeScreen';
+import {
+  DummyScreen as HomeScreen,
+  DummyScreen as SettingsScreen,
+} from 'screens/DummyScreen';
 import { ListScreen } from 'screens/ListScreen';
-import { SettingsScreen } from 'screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,

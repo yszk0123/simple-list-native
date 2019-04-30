@@ -54,15 +54,15 @@ class Loader extends React.Component {
   };
 }
 
-const App = () => {
-  return <Loader />;
-};
-
-export default App;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
 });
+
+const App = () => {
+  return <Loader />;
+};
+
+export default App;
