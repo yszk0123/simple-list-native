@@ -18,7 +18,6 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@expo/samples": "2.1.1",
     "expo": "^33.0.0-alpha.web.1",
     "native-base": "^2.12.1",
     "react": "^16.8.6",

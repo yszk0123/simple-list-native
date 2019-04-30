@@ -1,11 +1,17 @@
-import { ExpoConfigView } from '@expo/samples';
+import { Container, Content, Text } from 'native-base';
 import React from 'react';
 import { NavigationComponent } from 'types/ApplicationType';
 
 type Props = {};
 
 export const SettingsScreen: NavigationComponent<Props> = () => {
-  return <ExpoConfigView />;
+  return (
+    <Container>
+      <Content>
+        <Text>Settings</Text>
+      </Content>
+    </Container>
+  );
 };
 
 SettingsScreen.navigationOptions = {
