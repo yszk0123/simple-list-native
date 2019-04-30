@@ -2,7 +2,7 @@ import { Container, Content, Text } from 'native-base';
 import React from 'react';
 import { NavigationComponent } from 'types/ApplicationType';
 
-type Props = {};
+interface Props {}
 
 export const SettingsScreen: NavigationComponent<Props> = () => {
   return (

@@ -4,7 +4,7 @@ import { useActions } from 'typeless';
 import { getListState, ListActions, useModule } from '../ListInterface';
 import '../ListModule';
 
-type Props = {};
+interface Props {}
 
 export const List: React.FunctionComponent<Props> = () => {
   useModule();

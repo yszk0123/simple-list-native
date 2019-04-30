@@ -1,9 +1,10 @@
 import React from 'react';
 
-type NavigationOptions = {
+interface NavigationOptions {
   title: string;
-};
+}
 
-export type NavigationComponent<Props> = React.FunctionComponent<Props> & {
+export interface NavigationComponent<Props>
+  extends React.FunctionComponent<Props> {
   navigationOptions: NavigationOptions;
-};
+}

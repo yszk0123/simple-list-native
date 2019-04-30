@@ -2,9 +2,9 @@ import { AppLoading, Asset, Font, Icon } from 'expo';
 import React, { useCallback, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-type Props = {
+interface Props {
   skipLoadingScreen?: boolean;
-};
+}
 
 export const Loader: React.FunctionComponent<Props> = ({
   children,

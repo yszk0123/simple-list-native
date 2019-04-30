@@ -2,10 +2,10 @@ import { Icon } from 'expo';
 import React from 'react';
 import { Color } from '../constants/Color';
 
-type Props = {
+interface Props {
   name: string;
   focused: boolean;
-};
+}
 
 export const TabBarIcon: React.FunctionComponent<Props> = ({
   name,
