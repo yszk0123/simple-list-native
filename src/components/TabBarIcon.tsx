@@ -1,6 +1,6 @@
+import { Color } from 'constants/Color';
 import { Icon } from 'expo';
 import React from 'react';
-import { Color } from '../constants/Color';
 
 type Props = {
   name: string;

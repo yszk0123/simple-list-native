@@ -1,3 +1,4 @@
+import { MonoText } from 'components/StyledText';
 import { WebBrowser } from 'expo';
 import React from 'react';
 import {
@@ -9,7 +10,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { MonoText } from '../components/StyledText';
 
 export class HomeScreen extends React.Component {
   static navigationOptions = {

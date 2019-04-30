@@ -1,13 +1,13 @@
+import { TabBarIcon } from 'components/TabBarIcon';
 import React from 'react';
 import { Platform } from 'react-native';
 import {
   createBottomTabNavigator,
   createStackNavigator,
 } from 'react-navigation';
-import { TabBarIcon } from '../components/TabBarIcon';
-import { HomeScreen } from '../screens/HomeScreen';
-import { ListScreen } from '../screens/ListScreen';
-import { SettingsScreen } from '../screens/SettingsScreen';
+import { HomeScreen } from 'screens/HomeScreen';
+import { ListScreen } from 'screens/ListScreen';
+import { SettingsScreen } from 'screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
