@@ -1,8 +1,8 @@
 import { createModule } from 'typeless';
 
-export const [useModule, ListActions, getListState] = createModule(
-  Symbol('List'),
-)
+const LIST = Symbol('List');
+
+export const [useModule, ListActions, getListState] = createModule(LIST)
   .withActions({
     increment: null,
     decrement: null,

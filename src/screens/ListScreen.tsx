@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-// import { List } from '../features/List/components/List';
+import { List } from '../features/List';
 import { NavigationComponent } from '../types/ApplicationType';
 
 interface Props {}
@@ -9,7 +9,7 @@ export const ListScreen: NavigationComponent<Props> = () => {
   return (
     <View style={styles.container}>
       <Text>Hello</Text>
-      {/* <List /> */}
+      <List />
     </View>
   );
 };

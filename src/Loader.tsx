@@ -1,6 +1,7 @@
-import { AppNavigator } from 'navigation/AppNavigator';
-import React, { useState } from 'react';
-import { Platform, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { AppLoading, Asset, Font, Icon } from 'expo';
+import React, { useCallback, useState } from 'react';
+import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { AppNavigator } from './navigation/AppNavigator';
 
 type Props = {
   skipLoadingScreen?: boolean;
@@ -9,13 +10,25 @@ type Props = {
 export const Loader: React.FunctionComponent<Props> = ({
   skipLoadingScreen,
 }) => {
-  const [isLoadingComplete] = useState(true);
+  const [isLoadingComplete, setIsLoadingComplete] = useState(true);
+
+  const handleLoadingError = useCallback(error => {
+    // In this case, you might want to report the error to your error
+    // reporting service, for example Sentry
+    console.warn(error);
+  }, []);
+
+  const handleFinishLoading = useCallback(() => {
+    setIsLoadingComplete(true);
+  }, []);
 
   if (!isLoadingComplete && !skipLoadingScreen) {
     return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
+      <AppLoading
+        startAsync={loadResourcesAsync}
+        onError={handleLoadingError}
+        onFinish={handleFinishLoading}
+      />
     );
   } else {
     return (
@@ -26,6 +39,22 @@ export const Loader: React.FunctionComponent<Props> = ({
     );
   }
 };
+
+async function loadResourcesAsync() {
+  return Promise.all([
+    Asset.loadAsync([
+      require('../assets/images/robot-dev.png'),
+      require('../assets/images/robot-prod.png'),
+    ]),
+    Font.loadAsync({
+      // This is the font that we are using for our tab bar
+      ...Icon.Ionicons.font,
+      // We include SpaceMono because we use it in HomeScreen.js. Feel free
+      // to remove this if you are not using it in your app
+      'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+    }),
+  ]);
+}
 
 const styles = StyleSheet.create({
   container: {
