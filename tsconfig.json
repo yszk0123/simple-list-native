@@ -15,7 +15,10 @@
     "baseUrl": "src",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // Workaround
+    // @see https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24573
+    "skipLibCheck": true
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]
